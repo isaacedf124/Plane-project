@@ -12,9 +12,6 @@ public class Player : MonoBehaviour
     public GameObject powerupIndicator;
     public int powerUpDuration = 5;
 
-    private float normalStrength = 10; // how hard to hit enemy without powerup
-    private float powerupStrength = 25; // how hard to hit enemy with powerup
-
     void Start()
     {
         playerRb = GetComponent<Rigidbody>();
