@@ -12,6 +12,9 @@ public class Player : MonoBehaviour
     public GameObject powerupIndicator;
     public int powerUpDuration = 5;
 
+    public float powerupStrength;
+    public float normalStrength;
+
     void Start()
     {
         playerRb = GetComponent<Rigidbody>();
