@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
 public class plane : MonoBehaviour
 {
 
@@ -18,7 +19,7 @@ public class plane : MonoBehaviour
     
     void Update()
     {
-        input = Input.GetAxis("Horizontal");
+        input = -Input.GetAxis("Horizontal");
         transform.Translate(input * Time.deltaTime * Vector3.left * 10);
         if (input < 0)
         {
@@ -32,6 +33,7 @@ public class plane : MonoBehaviour
         {
             mesh.transform.eulerAngles = new Vector3(0, 0, 45);
         }
+
     }
 }
  

@@ -5,11 +5,11 @@ using UnityEngine;
 public class SpawnManager : MonoBehaviour
 {
     public GameObject enemyPrefab;
-    public GameObject powerupPrefab;
+    
 
     private float spawnRangeX = 8;
-    private float spawnZMin = -15; // set min spawn Z remove z min and max, set 1 number, 15
-    private float spawnZMax = -15; // set max spawn Z
+    private float spawnZMin = 0; // set min spawn Z remove z min and max, set 1 number, 15
+    private float spawnZMax = 0; // set max spawn Z
 
     public int enemyCount;
     public int waveCount = 1;
@@ -43,14 +43,6 @@ public class SpawnManager : MonoBehaviour
 
     void SpawnEnemyWave(int enemiesToSpawn)
     {
-        Vector3 powerupSpawnOffset = new Vector3(0, 0, -15); // make powerups spawn at player end
-
-        // If no powerups remain, spawn a powerup
-        if (GameObject.FindGameObjectsWithTag("Powerup").Length == 0) // check that there are zero powerups
-        {
-            Instantiate(powerupPrefab, GenerateSpawnPosition() + powerupSpawnOffset, powerupPrefab.transform.rotation);
-        }
-
         // Spawn number of enemy plane based on wave number
         for (int i = 0; i < enemiesToSpawn; i++)
         {

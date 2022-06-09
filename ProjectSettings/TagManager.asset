@@ -6,6 +6,7 @@ TagManager:
   tags:
   - badPlane
   - Powerup
+  - wall
   layers:
   - Default
   - TransparentFX
