@@ -11,9 +11,6 @@ public class plane : MonoBehaviour
 
    // Update is called once per frame
 
-
-
-
     float input;
     public float speed;
     

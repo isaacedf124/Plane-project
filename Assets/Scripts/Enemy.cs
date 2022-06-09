@@ -9,7 +9,7 @@ public class Enemy : Health
     // Start is called before the first frame update
     void Start()
     {
-        InvokeRepeating("Shoot", .5F, .5F);
+        InvokeRepeating("Shoot", Random.Range(.5F, 1f), Random.Range(.5F, 2f));
     }
     public override void ChangeHealth(int amount)
     {
