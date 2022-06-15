@@ -20,8 +20,13 @@ public class eplane : MonoBehaviour
     {
         if (collision.transform.tag == "wall")
         {
-            GameObject.Find("Plane1").GetComponent<PlayerHealth>().ChangeHealth(-1);
+            GameObject.Find("Plane1").GetComponent<PlayerHealth>().score -= 1;
             Destroy(gameObject);
         }
+        else
+        {
+            GameObject.Find("Plane1").GetComponent<PlayerHealth>().score += 1;
+        }
+
     }
 }

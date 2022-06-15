@@ -24,7 +24,7 @@ public class SpawnManager : MonoBehaviour
 
         if (enemyCount == 0)
         {
-            SpawnEnemyWave(waveCount);
+            SpawnEnemyWave((int)Mathf.Clamp(waveCount, 1, 10));
             {
                 waveCount++;
             }
